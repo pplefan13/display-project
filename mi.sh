@@ -1,5 +1,4 @@
 #!/bin/bash
-
     NDIR=$(find / -name "n.txt" 2>/dev/null | head -n 1)
     EDIR=$(find / -name "e.txt" 2>/dev/null | head -n 1)
     mv "$NDIR" /home/iulia/Documents/PlatformIO/Projects/ananas/data/
@@ -13,13 +12,12 @@
             echo "upload successful removing folder"
             rm -rf data
             mkdir data
-            echo "finished the thing"
+            echo "finished"
         else
             $(ls -A $DIR)echo "Upload failed! Keeping existing data directory."
             exit 1
         fi
     else
-        echo "no"
+        echo "task failed"
         exit 1
     fi
-
